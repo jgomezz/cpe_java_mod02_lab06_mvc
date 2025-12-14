@@ -35,7 +35,7 @@ public class ClientesBuscarServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 
-		String codigoCliente = request.getParameter("txtcodigo");
+		String codigoCliente = request.getParameter("txtCodigo");
 		
 		String ret = this.negocio.buscarCliente(codigoCliente);
 		
