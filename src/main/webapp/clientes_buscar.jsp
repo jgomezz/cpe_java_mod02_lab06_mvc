@@ -34,7 +34,6 @@
 			<button type="submit" class="btn btn-primary cw" 
 			    name="boton" id="boton">Buscar</button>
 
-		
 		</form>
 
 	</div>
