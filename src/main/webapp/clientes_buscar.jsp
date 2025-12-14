@@ -38,5 +38,29 @@
 
 	</div>
 	
+	<div class="container cw">
+   	
+   		<%
+   		
+   			/*
+   				// Scope ->  page, request, session, application
+		if (ret != null)
+			request.setAttribute("llave", ret);
+   			*/
+   		
+   			String nombreEncontrado = (String)request.getAttribute("llave");
+   			
+   			if (nombreEncontrado != null)
+   				out.println(nombreEncontrado);
+   			
+   			
+   		%>
+   	
+   	
+   	</div>
+	
+	
+	
+	
 </body>
 </html>

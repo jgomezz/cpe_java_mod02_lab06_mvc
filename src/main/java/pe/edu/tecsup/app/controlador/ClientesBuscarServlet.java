@@ -1,12 +1,13 @@
 package pe.edu.tecsup.app.controlador;
 
+import java.io.IOException;
+
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-
 import pe.edu.tecsup.app.modelo.ClienteNegocio;
 
 /**
@@ -32,7 +33,8 @@ public class ClientesBuscarServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, 
+						 HttpServletResponse response) throws ServletException, IOException {
 	
 
 		String codigoCliente = request.getParameter("txtCodigo");
@@ -41,8 +43,16 @@ public class ClientesBuscarServlet extends HttpServlet {
 		
 		System.out.println(ret);
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	
+		// Scope ->  page, request, session, application
+		if (ret != null)
+			request.setAttribute("llave", ret);
+		
+		
+		// Redirecciona
+		RequestDispatcher rd = request.getRequestDispatcher("clientes_buscar.jsp");
+		rd.forward(request, response);
+		
 	
 	}
 
