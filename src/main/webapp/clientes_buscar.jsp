@@ -1,3 +1,5 @@
+<%@page import="pe.edu.tecsup.app.modelo.Cliente" %>
+
 <!DOCTYPE html>
 <html> 
 <head>
@@ -48,11 +50,12 @@
 			request.setAttribute("llave", ret);
    			*/
    		
-   			String nombreEncontrado = (String)request.getAttribute("llave");
+   			Cliente nombreEncontrado = (Cliente)request.getAttribute("llave");
    			
-   			if (nombreEncontrado != null)
-   				out.println(nombreEncontrado);
-   			
+   			if (nombreEncontrado != null) {
+   				out.println(nombreEncontrado.nombre());
+   				out.println(nombreEncontrado.apellido());
+   	   		}
    			
    		%>
    	

@@ -6,22 +6,22 @@ import java.util.Map;
 public class ClienteNegocio {
 
 	
-	private Map<String,String> clientes;
+	private Map<String,Cliente> clientes;
 	
 	
 	public ClienteNegocio() {
 		
-		this.clientes = new HashMap<String,String>();
+		this.clientes = new HashMap<String,Cliente>();
 		
-		this.clientes.put("X001","Jaime");
-		this.clientes.put("X002","Silvia");
-		this.clientes.put("X003","Maribel");
+		this.clientes.put("X001",new Cliente("Jaime","Gomez"));
+		this.clientes.put("X002",new Cliente("Silvia","Alegria"));
+		this.clientes.put("X003",new Cliente("Maribel","Saldaña"));
 		
 		
 	}
 	
 	
-	public String buscarCliente(String codigoCliente) {
+	public Cliente buscarCliente(String codigoCliente) {
 
 		return this.clientes.get(codigoCliente);
 		
