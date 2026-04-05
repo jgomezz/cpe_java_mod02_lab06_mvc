@@ -16,6 +16,7 @@ public class ClienteNegocio {
 		this.clientes.put("X001",new Cliente("Jaime","Gomez"));
 		this.clientes.put("X002",new Cliente("Silvia","Alegria"));
 		this.clientes.put("X003",new Cliente("Maribel","Saldaña"));
+		this.clientes.put("X004",new Cliente("Pedro","Ortiz"));
 		
 		
 	}

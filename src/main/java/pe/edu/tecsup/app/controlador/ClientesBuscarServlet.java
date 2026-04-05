@@ -42,15 +42,16 @@ public class ClientesBuscarServlet extends HttpServlet {
 
 		String codigoCliente = request.getParameter("txtCodigo");
 		
-		Cliente ret = this.negocio.buscarCliente(codigoCliente);
-		
-		System.out.println(ret);
-		
+		Cliente client = this.negocio.buscarCliente(codigoCliente);
 	
 		// Scope ->  page, request, session, application
-		if (ret != null)
-			request.setAttribute("llave", ret);
+		if (client != null) {
+			System.out.println(client);
+			request.setAttribute("llave", client);
+		} else {
+			System.out.println("Cliente no existe");
 		
+		}
 		
 		// Redirecciona
 		RequestDispatcher rd = request.getRequestDispatcher("clientes_buscar.jsp");
