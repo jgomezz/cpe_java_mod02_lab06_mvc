@@ -9,4 +9,4 @@ Se tiene 4 autos
 
 Se debe crear un formulario para ingresar la placa de un auto y se debe ver el nombre y marca del auto
 
-<img src="images/auto.png" />
+<img src="images/autos.png" />
